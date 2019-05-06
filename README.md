@@ -84,6 +84,8 @@ function largestOfFour(arr) {
 }
 ```
 
+<hr>
+
 ### Confirm The Ending
 
 Check if a string (first argument, str) ends with the given target string (second argument, target).
@@ -95,5 +97,31 @@ Check if a string (first argument, str) ends with the given target string (secon
 function confirmEnding(str, target) {
   return str.split("").join("")
   .substr(str.length - target.length) === target
+}
+```
+
+<hr>
+
+### Repeat a String Repeat a String
+
+Repeat a given string str (first argument) for num times (second argument). Return an empty string if num is not a positive number.
+
+```js
+function repeatStringNumTimes(str, num) {
+  return num <= 0 ? "" 
+  : 
+  new Array(num).fill(str).join("")
+}
+```
+
+<hr>
+
+### Truncate a String
+
+```js
+function truncateString(str, num) {
+  return num < str.length ? 
+  str.substr(0, num) + "...":
+  str;
 }
 ```
