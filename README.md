@@ -2,6 +2,8 @@
 
 Just Solving Algorthims For fun - From Basic to Advanced!
 
+![algorerythim](images/algorerithm.jpg)
+
 
 <hr>
 
