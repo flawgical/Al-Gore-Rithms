@@ -89,6 +89,9 @@ function largestOfFour(arr) {
 Check if a string (first argument, str) ends with the given target string (second argument, target).
 
 ```js
+
+// This could have also been solved with .endswith() as well
+
 function confirmEnding(str, target) {
   return str.split("").join("")
   .substr(str.length - target.length) === target
