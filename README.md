@@ -130,6 +130,8 @@ function truncateString(str, num) {
 }
 ```
 
+<hr>
+
 ### Finders Keepers
 
 Create a function that looks through an array (first argument) and returns the first element in the array that passes a truth test (second argument). 
@@ -141,4 +143,16 @@ function findElement(arr, func) {
 }
 
 findElement([1, 2, 3, 4], num => num % 2 === 0);
+```
+
+### Boo who
+
+Check if a value is classified as a boolean primitive. Return true or false.
+
+Boolean primitives are true and false.s
+
+```js
+function booWho(bool) {
+  return typeof bool === "boolean";
+}
 ```
