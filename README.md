@@ -1,6 +1,6 @@
 # Al ' Gore ' Rithms
 
-Just Solving Algorthims For fun - From Basic to Advanced!
+Just Solving Algorthms For fun - From Basic to Advanced!
 
 ![algorerythim](images/algorerithm.jpg)
 
