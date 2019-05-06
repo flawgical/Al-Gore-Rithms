@@ -1,6 +1,6 @@
 # Al ' Gore ' Rithms
 
-Just Solving Algorthims For fun - From Basic to Advanced!
+Just Solving Algorthms For fun - From Basic to Advanced!
 
 ![algorerythim](images/algorerithm.jpg)
 
@@ -67,5 +67,33 @@ function findLongestWordLength(str) {
   return str.split(" ").sort((a, b) => (
     b.length - a.length)
     )[0].length
+}
+```
+
+<hr>
+
+### Return Largest Numbers in Arrays
+
+Return an array consisting of the largest number from each provided sub-array. 
+For simplicity, the provided array will contain exactly 4 sub-arrays.
+
+
+```js
+function largestOfFour(arr) {
+  return arr.map(elem => Math.max(...elem));
+}
+```
+
+### Confirm The Ending
+
+Check if a string (first argument, str) ends with the given target string (second argument, target).
+
+```js
+
+// This could have also been solved with .endswith() as well
+
+function confirmEnding(str, target) {
+  return str.split("").join("")
+  .substr(str.length - target.length) === target
 }
 ```
