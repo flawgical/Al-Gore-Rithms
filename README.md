@@ -83,3 +83,14 @@ function largestOfFour(arr) {
   return arr.map(elem => Math.max(...elem));
 }
 ```
+
+### Confirm The Ending
+
+Check if a string (first argument, str) ends with the given target string (second argument, target).
+
+```js
+function confirmEnding(str, target) {
+  return str.split("").join("")
+  .substr(str.length - target.length) === target
+}
+```
