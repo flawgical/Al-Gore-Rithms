@@ -156,3 +156,43 @@ function booWho(bool) {
   return typeof bool === "boolean";
 }
 ```
+
+<hr>
+
+###  Title Case a Sentence
+
+Return the provided string with the first letter of each word capitalized. Make sure the rest of the word is in lower case.
+
+For the purpose of this exercise, you should also capitalize connecting words like "the" and "of".
+
+```js
+function titleCase(str) {
+ return str
+	.toLowerCase()
+	.split(" ")
+	.map(substr => (
+	 substr.replace(substr.charAt(0), 
+	 substr.charAt(0).toUpperCase())
+	))
+	.join(" ")
+}
+```
+
+<hr>
+
+### Slice and Splice
+
+You are given two arrays and an index.
+
+Use the array methods slice and splice to copy each element of the first array into the second array, in order.
+
+Begin inserting elements at index n of the second array.
+
+Return the resulting array. The input arrays should remain the same after the function runs.
+
+```js
+function frankenSplice(arr1, arr2, n) {
+	arr2.splice(n, 0, arr1.slice(0))  
+	return arr2
+}
+```
