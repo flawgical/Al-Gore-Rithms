@@ -191,8 +191,13 @@ Begin inserting elements at index n of the second array.
 Return the resulting array. The input arrays should remain the same after the function runs.
 
 ```js
-function frankenSplice(arr1, arr2, n) {
-	arr2.splice(n, 0, arr1.slice(0))  
-	return arr2
-}
+  function frankenSplice(arr1, arr2, n) {
+	let newArr = [...arr2]
+      newArr.splice(n, 0, ...arr1) 
+      return newArr
+  }
 ```
+
+<hr>
+
+### 
