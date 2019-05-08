@@ -1,6 +1,6 @@
 # Al ' Gore ' Rithms
 
-Just Solving Algorthms For fun - From Basic to Advanced!
+Just Solving Algorithms For fun - From Basic to Advanced! 
 
 ![algorerythim](images/algorerithm.jpg)
 
@@ -216,4 +216,20 @@ function getIndexToIns(arr, num) {
   }
   return arr.length
 }
+```
+
+<hr>
+
+# Recursion Practice
+
+### Find Max
+
+Write a function returns the largest number in a given array.
+
+```js
+function findMax(arr, index = 0, max = 0){
+  if(index === arr.length) return max
+  if(arr[index] > max) max = arr[index]
+  return findMax(arr, ++index, max)	
+} 
 ```
