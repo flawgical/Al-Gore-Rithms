@@ -226,8 +226,10 @@ function getIndexToIns(arr, num) {
 
 Write a function returns the largest number in a given array.
 
+I've also made it so that it will work with negative numbers as well!
+
 ```js
-function findMax(arr, index = 0, max = 0){
+function findMax(arr, index = 0, max = -1){
   if(index === arr.length) return max
   if(arr[index] > max) max = arr[index]
   return findMax(arr, ++index, max)	
