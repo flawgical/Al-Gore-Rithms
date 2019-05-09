@@ -149,7 +149,7 @@ findElement([1, 2, 3, 4], num => num % 2 === 0);
 
 Check if a value is classified as a boolean primitive. Return true or false.
 
-Boolean primitives are true and false.s
+Boolean primitives are true and false
 
 ```js
 function booWho(bool) {
@@ -193,8 +193,8 @@ Return the resulting array. The input arrays should remain the same after the fu
 ```js
   function frankenSplice(arr1, arr2, n) {
 	let newArr = [...arr2]
-      newArr.splice(n, 0, ...arr1) 
-      return newArr
+  newArr.splice(n, 0, ...arr1) 
+  return newArr
   }
 ```
 
@@ -240,7 +240,7 @@ Write a function that returns the factorial of a given number
 
 ```js
 function factorial(num){
-  if(num === 1) return num
+  if(num === 0) return 1
   return num * factorial(--num)
 }
 ```
