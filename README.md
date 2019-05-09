@@ -212,7 +212,7 @@ Likewise, getIndexToIns([20,3,5], 19) should return 2 because once the array has
 function getIndexToIns(arr, num) {
   arr.sort((a, b) => a - b)
   for(let elem of arr){
-  	if(elem >= num) return arr.indexOf(elem)
+    if(elem >= num) return arr.indexOf(elem)
   }
   return arr.length
 }
@@ -240,8 +240,8 @@ Write a function that returns the factorial of a given number
 
 ```js
 function factorial(num){
-    if(num === 1) return num
-  	return num * factorial(--num)
+  if(num === 1) return num
+  return num * factorial(--num)
 }
 ```
 
@@ -252,8 +252,8 @@ This function returns the Nth number in the fibonacci sequence.
 
 ```js
 function fibonacci(nth, first = 1, last = 1) {
-	if(last > nth) return last
-    last = first + last
-    return fibonacci(nth, last, first)
+  if(last > nth) return last
+  last = first + last
+  return fibonacci(nth, last, first)
 }
 ```
