@@ -233,3 +233,14 @@ function findMax(arr, index = 0, max = 0){
   return findMax(arr, ++index, max)	
 } 
 ```
+
+### Factorial
+
+Write a function that returns the factorial of a given number
+
+```js
+function factorial(num){
+    if(num === 1) return num
+  	return num * factorial(--num)
+}
+```
