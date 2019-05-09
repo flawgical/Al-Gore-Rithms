@@ -1,6 +1,6 @@
 # Al ' Gore ' Rithms
 
-Just Solving Algorthms For fun - From Basic to Advanced!
+Just Solving Algorithms For fun - From Basic to Advanced! 
 
 ![algorerythim](images/algorerithm.jpg)
 
@@ -149,7 +149,7 @@ findElement([1, 2, 3, 4], num => num % 2 === 0);
 
 Check if a value is classified as a boolean primitive. Return true or false.
 
-Boolean primitives are true and false.s
+Boolean primitives are true and false
 
 ```js
 function booWho(bool) {
@@ -193,8 +193,8 @@ Return the resulting array. The input arrays should remain the same after the fu
 ```js
   function frankenSplice(arr1, arr2, n) {
 	let newArr = [...arr2]
-      newArr.splice(n, 0, ...arr1) 
-      return newArr
+  newArr.splice(n, 0, ...arr1) 
+  return newArr
   }
 ```
 
@@ -212,8 +212,50 @@ Likewise, getIndexToIns([20,3,5], 19) should return 2 because once the array has
 function getIndexToIns(arr, num) {
   arr.sort((a, b) => a - b)
   for(let elem of arr){
-  	if(elem >= num) return arr.indexOf(elem)
+    if(elem >= num) return arr.indexOf(elem)
   }
   return arr.length
+}
+```
+
+<hr>
+
+# Recursion Practice
+
+### Find Max
+
+Write a function returns the largest number in a given array.
+
+```js
+function findMax(arr, index = 0, max = 0){
+  if(index === arr.length) return max
+  if(arr[index] > max) max = arr[index]
+  return findMax(arr, ++index, max)	
+} 
+```
+
+### Factorial
+
+Write a function that returns the factorial of a given number
+
+```js
+function factorial(num){
+  if(num === 0) return 1
+  return num * factorial(--num)
+}
+```
+
+
+## Fibonacci
+
+This function returns the nth number in the fibonacci sequence.
+
+I've written it so that any number can be passed and it would only return the last number in the fibonacci sequence up to nth.
+
+```js
+function fibonacci(nth, first = 1, last = 1) {
+  if(last > nth) {nth = first - last; return nth;}
+  last = first + last
+  return fibonacci(nth, last, first)
 }
 ```
