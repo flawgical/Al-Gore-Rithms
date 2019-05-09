@@ -244,3 +244,16 @@ function factorial(num){
   	return num * factorial(--num)
 }
 ```
+
+
+## Fibonacci
+
+This function returns the Nth number in the fibonacci sequence.
+
+```js
+function fibonacci(nth, first = 1, last = 1) {
+	if(last > nth) return last
+    last = first + last
+    return fibonacci(nth, last, first)
+}
+```
