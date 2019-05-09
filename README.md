@@ -248,11 +248,13 @@ function factorial(num){
 
 ## Fibonacci
 
-This function returns the Nth number in the fibonacci sequence.
+This function returns the nth number in the fibonacci sequence.
+
+I've written it so that any number can be passed and it would only return the last number in the fibonacci sequence up to nth.
 
 ```js
 function fibonacci(nth, first = 1, last = 1) {
-  if(last > nth) return last
+  if(last > nth) {nth = first - last; return nth;}
   last = first + last
   return fibonacci(nth, last, first)
 }
