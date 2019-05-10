@@ -220,6 +220,7 @@ function getIndexToIns(arr, num) {
 
 <hr>
 
+
 # Recursion Practice
 
 ### Find Max
@@ -261,3 +262,18 @@ function fibonacci(nth, first = 1, last = 1) {
   return fibonacci(nth, last, first)
 }
 ```
+
+### Falling Distance in Meters
+Write a function that returns the distance in meters an object has fallen in seconds
+
+Design a program that calls the function in a loop that passes time values 1-10 (seconds) as args
+```js
+function fallingDistance(seconds = 1, distance = null) {
+	if(seconds === 11) return;
+	distance = .5 * (9.8 * Math.pow(seconds, 2))
+	console.log(`After ${seconds} seconds, an object falls ${distance.toFixed(2)} meters`)
+	return fallingDistance(++seconds, distance)
+}
+
+```
+  
