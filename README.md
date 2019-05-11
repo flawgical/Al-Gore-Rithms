@@ -220,14 +220,17 @@ function getIndexToIns(arr, num) {
 
 <hr>
 
+
 # Recursion Practice
 
 ### Find Max
 
 Write a function returns the largest number in a given array.
 
+I've also made it so that it will work with negative numbers as well!
+
 ```js
-function findMax(arr, index = 0, max = 0){
+function findMax(arr, index = 0, max = -1){
   if(index === arr.length) return max
   if(arr[index] > max) max = arr[index]
   return findMax(arr, ++index, max)	
@@ -259,3 +262,18 @@ function fibonacci(nth, first = 1, last = 1) {
   return fibonacci(nth, last, first)
 }
 ```
+
+### Falling Distance in Meters
+Write a function that returns the distance in meters an object has fallen in seconds
+
+Design a program that calls the function in a loop that passes time values 1-10 (seconds) as args
+```js
+function fallingDistance(seconds = 1, distance = null) {
+	if(seconds === 11) return;
+	distance = .5 * (9.8 * Math.pow(seconds, 2))
+	console.log(`After ${seconds} seconds, an object falls ${distance.toFixed(2)} meters`)
+	return fallingDistance(++seconds, distance)
+}
+
+```
+  
