@@ -220,6 +220,32 @@ function getIndexToIns(arr, num) {
 
 <hr>
 
+### Mutations
+
+Return true if the string in the first element of the array contains all of the letters of the string in the second element of the array.
+
+For example, ["hello", "Hello"], should return true because all of the letters in the second string are present in the first, ignoring case.
+
+The arguments ["hello", "hey"] should return false because the string "hello" does not contain a "y".
+
+Lastly, ["Alien", "line"], should return true because all of the letters in "line" are present in "Alien".
+
+_Not the most elegant solution_
+
+```js
+function mutation(arr) {
+	let counter = 0
+ 	let arr2 = arr.splice(1,1)
+	arr2 = arr2.join("").toLowerCase().split("")
+	arr = arr.join("").toLowerCase().split("")
+	arr2.forEach(elem => (
+	arr.includes(elem) && counter++))
+	return counter === arr2.length
+}
+```
+
+<hr>
+
 
 # Recursion Practice
 
