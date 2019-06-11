@@ -246,6 +246,38 @@ function mutation(arr) {
 
 <hr>
 
+# Bubble Sort
+
+Bubble sort is one of the simplest sorting algorithms to write but not the most efficient by any means.
+
+This algorithm will travese a given array and compare the element in the current iteration to the element in the next iteration. If the current element is larger than the next element, the algorithm will swap these elements in place until reaching the end of the array. There must also be some sort of mechanism in place to repeat this process until all the element values are sorted in the given array from smallest to largest. In the recursion section, I've solved this as well using a recursive solution
+
+#### Big O Analysis 
+  
+  - We have one loop nested inside another so this would be a time complexity of: `O(n^2)`
+
+  - Since we're not having to create anymore space for the array we're sorting in place we get a space complexity of: `O(n)`
+
+
+```js
+function bubbleSort(arr) {
+	let swapped; 
+	do {
+		swapped = false 
+        for(var i = 0; i < arr.length - 1; i++){
+            if(arr[i] > arr[i + 1]) {
+                var temp = arr[i]
+                arr[i] = arr[i + 1]
+                arr[i + 1] = temp
+				swapped = true
+            }
+        }
+	} while (swapped)
+	return arr
+}
+
+```
+
 
 # Recursion Practice
 
@@ -310,6 +342,30 @@ function fallingDistance(seconds = 1, distance = null) {
 
 ```
 
+### Bubble Sort
+
+Return a sorted array using the bubble sort principle (See above for explaination)
+
+```js
+function bubbleSort(arr, pointer = arr.length - 1) {
+// 1 Define the base case - return a sorted array
+if(pointer === 0) return arr
+
+// 2 Perform the action - make swaps
+  for(var i = 0; i < arr.length - 1; i++){
+       if(arr[i] > arr[i + 1]) {
+           var temp = arr[i]
+           arr[i] = arr[i + 1]
+           arr[i + 1] = temp
+
+       }
+  }
+
+// 3 Recursively call the function again passing in the current state of array
+	return bubbleSort(arr, --pointer)
+}
+```
+  
 <hr>
 
 ### Chunky Monkey
