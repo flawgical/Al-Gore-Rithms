@@ -295,6 +295,8 @@ function findMax(arr, index = 0, max = -1){
 } 
 ```
 
+<hr>
+
 ### Factorial
 
 Write a function that returns the factorial of a given number
@@ -306,12 +308,15 @@ function factorial(num){
 }
 ```
 
+<hr>
 
 ## Fibonacci
 
 This function returns the nth number in the fibonacci sequence.
 
 I've written it so that any number can be passed and it would only return the last number in the fibonacci sequence up to nth.
+
+<hr>
 
 ```js
 function fibonacci(nth, first = 1, last = 1) {
@@ -320,6 +325,8 @@ function fibonacci(nth, first = 1, last = 1) {
   return fibonacci(nth, last, first)
 }
 ```
+
+<hr>
 
 ### Falling Distance in Meters
 Write a function that returns the distance in meters an object has fallen in seconds
@@ -335,6 +342,7 @@ function fallingDistance(seconds = 1, distance = null) {
 
 ```
 
+<<<<<<< HEAD
 ### Bubble Sort
 
 Return a sorted array using the bubble sort principle (See above for explaination)
@@ -359,3 +367,20 @@ if(pointer === 0) return arr
 }
 ```
   
+=======
+<hr>
+
+### Chunky Monkey
+
+Write a function that splits an array (first argument) into groups the length of size (second argument) and returns them as a two-dimensional array.
+
+```js
+function chunkArrayInGroups(arr, size, newArr = []) {
+  if(arr.length === 0) return newArr;
+  newArr.push(arr.splice(0, size))
+  return chunkArrayInGroups(arr, size, newArr);
+}
+
+chunkArrayInGroups(["a", "b", "c", "d"], 2);
+```
+>>>>>>> c61b4e574ea4bef9f0bdcbaea0b24e9570cca7f7
