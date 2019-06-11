@@ -342,7 +342,6 @@ function fallingDistance(seconds = 1, distance = null) {
 
 ```
 
-<<<<<<< HEAD
 ### Bubble Sort
 
 Return a sorted array using the bubble sort principle (See above for explaination)
@@ -367,7 +366,6 @@ if(pointer === 0) return arr
 }
 ```
   
-=======
 <hr>
 
 ### Chunky Monkey
@@ -383,4 +381,3 @@ function chunkArrayInGroups(arr, size, newArr = []) {
 
 chunkArrayInGroups(["a", "b", "c", "d"], 2);
 ```
->>>>>>> c61b4e574ea4bef9f0bdcbaea0b24e9570cca7f7
