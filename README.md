@@ -254,9 +254,9 @@ This algorithm will travese a given array and compare the element in the current
 
 ##### Big O Analysis 
   
-  - We have one loop nested inside another so this would be a time complexity of: `O(n^2)`
+1. We have one loop nested inside another so this would be a time complexity of: `O(n^2)`
 
-  - Since we're not having to create anymore space for the array we're sorting in place we get a space complexity of: `O(n)`
+2. Since we're not having to create anymore space for the array we're sorting in place we get a space complexity of: `O(1)`
 
 
 ```js
@@ -277,6 +277,60 @@ function bubbleSort(arr) {
 }
 
 ```
+
+<hr>
+
+### Insertion Sort
+
+Think of when you're playing poker (The card game), when provided a hand, we usually sort the card based on their values from right to left. When we see a card with a smaller value in front, we pick it up and move it all the way to the right, or to a position on the right we'd considered sorted relative to neighboring cards. When working with arrays, this behavior along with dividing the array into one side being sorted and another side being unsorted is what gives this ineffecient algorithm it's name. Did I say inefficient? Yes, that's right, this algorithm has the worst big O time complexity out there.
+
+**Solution A**
+
+```js
+function insertionSort(arr) {
+  const sortedArr = [...arr]
+    for(let i = 0; i < sortedArr.length; i++) {
+      let currentElement = arr[i];
+      let j;
+      for(j = i - 1; j >= 0 && sortedArr[j] > currentElement; j--) {
+        sortedArr[j + 1] = sortedArr[j];
+		  }
+		  sortedArr[j + 1] = currentElement;
+	  }
+	return sortedArr;
+}
+```
+
+**Solution B**
+
+```js
+
+function insertionSort(arr) {
+  let sortedArr = [...arr];
+  for(let i = 1; i < sortedArr.length; i++) {
+    for(let j = 0; j < i; j++) {
+      if(sortedArr[i] < sortedArr[j]) {
+        let spliced = sortedArr.splice(i, 1);
+        sortedArr.splice(j, 0, splice[0]);
+			}
+		}
+	}
+	return sortedArr;
+}
+```
+
+*Both of these solutions preserve the original array*
+
+
+##### Big O Analysis 
+
+1. Space complexity - `O(1)` - because we're not creating more space - we're working on and returning one array
+
+2. Time Complexity - `O(n^2)` - because for each iteration of `n` we must perform steps/iterations
+
+
+<hr>
+
 
 
 # Recursion Practice
