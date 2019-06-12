@@ -246,13 +246,13 @@ function mutation(arr) {
 
 <hr>
 
-# Bubble Sort
+### Bubble Sort
 
 Bubble sort is one of the simplest sorting algorithms to write but not the most efficient by any means.
 
 This algorithm will travese a given array and compare the element in the current iteration to the element in the next iteration. If the current element is larger than the next element, the algorithm will swap these elements in place until reaching the end of the array. There must also be some sort of mechanism in place to repeat this process until all the element values are sorted in the given array from smallest to largest. In the recursion section, I've solved this as well using a recursive solution
 
-#### Big O Analysis 
+##### Big O Analysis 
   
   - We have one loop nested inside another so this would be a time complexity of: `O(n^2)`
 
