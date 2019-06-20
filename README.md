@@ -274,7 +274,7 @@ function bubbleSort(arr) {
     }
   } while (swapped)
   return arr;
-  }
+}
 ```
 
 <hr>
@@ -288,15 +288,15 @@ Think of when you're playing poker (The card game), when provided a hand, we usu
 ```js
 function insertionSort(arr) {
   const sortedArr = [...arr];
-    for(let i = 0; i < sortedArr.length; i++) {
-      let currentElement = arr[i];
-      let j;
-      for(j = i - 1; j >= 0 && sortedArr[j] > currentElement; j--) {
-        sortedArr[j + 1] = sortedArr[j];
-		  }
-		  sortedArr[j + 1] = currentElement;
-	  }
-	return sortedArr;
+  for(let i = 0; i < sortedArr.length; i++) {
+    let currentElement = arr[i];
+    let j;
+    for(j = i - 1; j >= 0 && sortedArr[j] > currentElement; j--) {
+      sortedArr[j + 1] = sortedArr[j];
+    }
+    sortedArr[j + 1] = currentElement;
+  }
+  return sortedArr;
 }
 ```
 
