@@ -65,8 +65,8 @@ Your response should be a number.
 
 function findLongestWordLength(str) {
   return str.split(" ").sort((a, b) => (
-    b.length - a.length)
-    )[0].length
+  b.length - a.length)
+  )[0].length
 }
 ```
 
@@ -167,14 +167,14 @@ For the purpose of this exercise, you should also capitalize connecting words li
 
 ```js
 function titleCase(str) {
- return str
-	.toLowerCase()
-	.split(" ")
-	.map(substr => (
-	 substr.replace(substr.charAt(0), 
-	 substr.charAt(0).toUpperCase())
-	))
-	.join(" ")
+  return str
+    .toLowerCase()
+    .split(" ")
+    .map(substr => (
+      substr.replace(substr.charAt(0),
+        substr.charAt(0).toUpperCase())
+    ))
+    .join(" ")
 }
 ```
 
@@ -191,11 +191,11 @@ Begin inserting elements at index n of the second array.
 Return the resulting array. The input arrays should remain the same after the function runs.
 
 ```js
-  function frankenSplice(arr1, arr2, n) {
+function frankenSplice(arr1, arr2, n) {
 	let newArr = [...arr2]
   newArr.splice(n, 0, ...arr1) 
   return newArr
-  }
+}
 ```
 
 <hr>
@@ -230,7 +230,7 @@ The arguments ["hello", "hey"] should return false because the string "hello" do
 
 Lastly, ["Alien", "line"], should return true because all of the letters in "line" are present in "Alien".
 
-_Not the most elegant solution_
+_Not the most elegant solution_ 🤦‍♂️
 
 ```js
 function mutation(arr) {
@@ -411,7 +411,6 @@ if(pointer === 0) return arr
            var temp = arr[i]
            arr[i] = arr[i + 1]
            arr[i + 1] = temp
-
        }
   }
 
