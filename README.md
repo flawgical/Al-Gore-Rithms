@@ -311,10 +311,10 @@ function insertionSort(arr) {
       if(sortedArr[i] < sortedArr[j]) {
         let spliced = sortedArr.splice(i, 1);
         sortedArr.splice(j, 0, splice[0]);
-			}
-		}
-	}
-	return sortedArr;
+      }
+    }
+  }
+  return sortedArr;
 }
 ```
 
