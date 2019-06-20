@@ -234,13 +234,13 @@ _Not the most elegant solution_ 🤦‍♂️
 
 ```js
 function mutation(arr) {
-	let counter = 0;
- 	let arr2 = arr.splice(1,1);
-	arr2 = arr2.join("").toLowerCase().split("");
-	arr = arr.join("").toLowerCase().split("");
-	arr2.forEach(elem => (
-	arr.includes(elem) && counter++));
-	return counter === arr2.length;
+  let counter = 0;
+  let arr2 = arr.splice(1,1);
+  arr2 = arr2.join("").toLowerCase().split("");
+  arr = arr.join("").toLowerCase().split("");
+  arr2.forEach(elem => (
+    arr.includes(elem) && counter++));
+  return counter === arr2.length;
 }
 ```
 
