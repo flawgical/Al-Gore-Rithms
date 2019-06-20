@@ -47,7 +47,7 @@ Factorials are often represented with the shorthand notation n!
 
 ```js
 function factorialize(num) {
-  if(num === 0) return 1
+  if(num === 0) return 1;
   return num * factorialize(num - 1);
 }
 ```
@@ -66,7 +66,7 @@ Your response should be a number.
 function findLongestWordLength(str) {
   return str.split(" ").sort((a, b) => (
   b.length - a.length)
-  )[0].length
+  )[0].length;
 }
 ```
 
@@ -96,7 +96,7 @@ Check if a string (first argument, str) ends with the given target string (secon
 
 function confirmEnding(str, target) {
   return str.split("").join("")
-  .substr(str.length - target.length) === target
+  .substr(str.length - target.length) === target;
 }
 ```
 
@@ -110,7 +110,7 @@ Repeat a given string str (first argument) for num times (second argument). Retu
 function repeatStringNumTimes(str, num) {
   return num <= 0 ? "" 
   : 
-  new Array(num).fill(str).join("")
+  new Array(num).fill(str).join("");
 }
 ```
 
@@ -174,7 +174,7 @@ function titleCase(str) {
       substr.replace(substr.charAt(0),
         substr.charAt(0).toUpperCase())
     ))
-    .join(" ")
+    .join(" ");
 }
 ```
 
@@ -192,9 +192,9 @@ Return the resulting array. The input arrays should remain the same after the fu
 
 ```js
 function frankenSplice(arr1, arr2, n) {
-	let newArr = [...arr2]
-  newArr.splice(n, 0, ...arr1) 
-  return newArr
+  let newArr = [...arr2];
+  newArr.splice(n, 0, ...arr1); 
+  return newArr;
 }
 ```
 
@@ -212,9 +212,9 @@ Likewise, getIndexToIns([20,3,5], 19) should return 2 because once the array has
 function getIndexToIns(arr, num) {
   arr.sort((a, b) => a - b)
   for(let elem of arr){
-    if(elem >= num) return arr.indexOf(elem)
+    if(elem >= num) return arr.indexOf(elem);
   }
-  return arr.length
+  return arr.length;
 }
 ```
 
@@ -234,13 +234,13 @@ _Not the most elegant solution_ 🤦‍♂️
 
 ```js
 function mutation(arr) {
-	let counter = 0
- 	let arr2 = arr.splice(1,1)
-	arr2 = arr2.join("").toLowerCase().split("")
-	arr = arr.join("").toLowerCase().split("")
+	let counter = 0;
+ 	let arr2 = arr.splice(1,1);
+	arr2 = arr2.join("").toLowerCase().split("");
+	arr = arr.join("").toLowerCase().split("");
 	arr2.forEach(elem => (
-	arr.includes(elem) && counter++))
-	return counter === arr2.length
+	arr.includes(elem) && counter++));
+	return counter === arr2.length;
 }
 ```
 
@@ -263,17 +263,17 @@ This algorithm will travese a given array and compare the element in the current
 function bubbleSort(arr) {
 	let swapped; 
 	do {
-		swapped = false 
+		swapped = false; 
         for(var i = 0; i < arr.length - 1; i++){
             if(arr[i] > arr[i + 1]) {
-                var temp = arr[i]
-                arr[i] = arr[i + 1]
-                arr[i + 1] = temp
-				swapped = true
+                var temp = arr[i];
+                arr[i] = arr[i + 1];
+                arr[i + 1] = temp;
+				swapped = true;
             }
         }
 	} while (swapped)
-	return arr
+	return arr;
 }
 
 ```
@@ -288,7 +288,7 @@ Think of when you're playing poker (The card game), when provided a hand, we usu
 
 ```js
 function insertionSort(arr) {
-  const sortedArr = [...arr]
+  const sortedArr = [...arr];
     for(let i = 0; i < sortedArr.length; i++) {
       let currentElement = arr[i];
       let j;
@@ -343,9 +343,9 @@ I've also made it so that it will work with negative numbers as well!
 
 ```js
 function findMax(arr, index = 0, max = -1){
-  if(index === arr.length) return max
-  if(arr[index] > max) max = arr[index]
-  return findMax(arr, ++index, max)	
+  if(index === arr.length) return max;
+  if(arr[index] > max) max = arr[index];
+  return findMax(arr, ++index, max);
 } 
 ```
 
@@ -357,8 +357,8 @@ Write a function that returns the factorial of a given number
 
 ```js
 function factorial(num){
-  if(num === 0) return 1
-  return num * factorial(--num)
+  if(num === 0) return 1;
+  return num * factorial(--num);
 }
 ```
 
@@ -375,8 +375,8 @@ I've written it so that any number can be passed and it would only return the la
 ```js
 function fibonacci(nth, first = 1, last = 1) {
   if(last > nth) {nth = first - last; return nth;}
-  last = first + last
-  return fibonacci(nth, last, first)
+  last = first + last;
+  return fibonacci(nth, last, first);
 }
 ```
 
@@ -389,9 +389,9 @@ Design a program that calls the function in a loop that passes time values 1-10 
 ```js
 function fallingDistance(seconds = 1, distance = null) {
 	if(seconds === 11) return;
-	distance = .5 * (9.8 * Math.pow(seconds, 2))
-	console.log(`After ${seconds} seconds, an object falls ${distance.toFixed(2)} meters`)
-	return fallingDistance(++seconds, distance)
+	distance = .5 * (9.8 * Math.pow(seconds, 2));
+	console.log(`After ${seconds} seconds, an object falls ${distance.toFixed(2)} meters`);
+	return fallingDistance(++seconds, distance);
 }
 
 ```
@@ -403,19 +403,19 @@ Return a sorted array using the bubble sort principle (See above for explainatio
 ```js
 function bubbleSort(arr, pointer = arr.length - 1) {
 // 1 Define the base case - return a sorted array
-if(pointer === 0) return arr
+if(pointer === 0) return arr;
 
 // 2 Perform the action - make swaps
   for(var i = 0; i < arr.length - 1; i++){
        if(arr[i] > arr[i + 1]) {
-           var temp = arr[i]
-           arr[i] = arr[i + 1]
-           arr[i + 1] = temp
+           var temp = arr[i];
+           arr[i] = arr[i + 1];
+           arr[i + 1] = temp;
        }
   }
 
 // 3 Recursively call the function again passing in the current state of array
-	return bubbleSort(arr, --pointer)
+	return bubbleSort(arr, --pointer);
 }
 ```
   
@@ -428,7 +428,7 @@ Write a function that splits an array (first argument) into groups the length of
 ```js
 function chunkArrayInGroups(arr, size, newArr = []) {
   if(arr.length === 0) return newArr;
-  newArr.push(arr.splice(0, size))
+  newArr.push(arr.splice(0, size));
   return chunkArrayInGroups(arr, size, newArr);
 }
 
