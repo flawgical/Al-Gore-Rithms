@@ -387,10 +387,10 @@ Write a function that returns the distance in meters an object has fallen in sec
 Design a program that calls the function in a loop that passes time values 1-10 (seconds) as args
 ```js
 function fallingDistance(seconds = 1, distance = null) {
-	if(seconds === 11) return;
-	distance = .5 * (9.8 * Math.pow(seconds, 2));
-	console.log(`After ${seconds} seconds, an object falls ${distance.toFixed(2)} meters`);
-	return fallingDistance(++seconds, distance);
+  if(seconds === 11) return;
+  distance = .5 * (9.8 * Math.pow(seconds, 2));
+  console.log(`After ${seconds} seconds, an object falls ${distance.toFixed(2)} meters`);
+  return fallingDistance(++seconds, distance);
 }
 
 ```
@@ -402,19 +402,19 @@ Return a sorted array using the bubble sort principle (See above for explainatio
 ```js
 function bubbleSort(arr, pointer = arr.length - 1) {
 // 1 Define the base case - return a sorted array
-if(pointer === 0) return arr;
+  if(pointer === 0) return arr;
 
 // 2 Perform the action - make swaps
   for(var i = 0; i < arr.length - 1; i++){
-       if(arr[i] > arr[i + 1]) {
-           var temp = arr[i];
-           arr[i] = arr[i + 1];
-           arr[i + 1] = temp;
-       }
+    if(arr[i] > arr[i + 1]) {
+      var temp = arr[i];
+      arr[i] = arr[i + 1];
+      arr[i + 1] = temp;
+    }
   }
 
 // 3 Recursively call the function again passing in the current state of array
-	return bubbleSort(arr, --pointer);
+  return bubbleSort(arr, --pointer);
 }
 ```
   
@@ -430,6 +430,5 @@ function chunkArrayInGroups(arr, size, newArr = []) {
   newArr.push(arr.splice(0, size));
   return chunkArrayInGroups(arr, size, newArr);
 }
-
 chunkArrayInGroups(["a", "b", "c", "d"], 2);
 ```
